@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>Form</title>
+  </head>
+  <body>
+    <div class="personal-data">
+      <form id="form" method="post" action="enviado.html">
+          <div class="user">
+            <fieldset>
+              <legend>Datos Personales</legend>
+            <div class="user__details">
+              <!--NOMBRE-->
+              <div class="user__details-inputbox">
+                <label for="nombre">Nombre</label>
+                <input
+                  name="nombre"
+                  placeholder="Tu nombre"
+                  type="text"
+                  id="nombre"
+                  autocomplete="off"
+                />
+              </div>
+              <!--APELLIDOS-->
+              <div class="user__details-inputbox">
+                <label for="apellido">Apellido</label
+                ><input
+                  type="text"
+                  placeholder="Tu apellido"
+                  name="apellido1"
+                  id="apellido"
+                  autocomplete="off"
+                />
+              </div>
+              <!--EMAIL-->
+              <div class="user__details-inputbox">
+                <label for="email"
+                  >Email<span class="user__details-title">*</span></label
+                ><input
+                  type="email"
+                  placeholder="Tu correo electrónico"
+                  name="email"
+                  id="email"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div class="quest">
+            <fieldset>
+              <legend>Encuesta</legend>
+              <!--SELECT-->
+              <div class="quest__details">
+                <div class="quest__details-title">
+                  ¿Qué puntuación darías a esta página?
+                </div>
+                <div class="quest__details-container">
+                  <select>
+                    <option disabled selected>Selecciona una opción</option>
+                    <option name="1" value="1">1</option>
+                    <option name="2" value="2">2</option>
+                    <option name="3" value="3">3</option>
+                    <option name="4" value="4">4</option>
+                    <option name="5" value="5">5</option>
+                  </select>
+                </div>
+              </div>
+              <!--CHECKBOX-->
+              <div class="quest__details quest-category">
+                <div class="quest-category-title">
+                  ¿Qué apartados te gustaría añadir a esta página?
+                </div>
+                <div class="quest-category__container">
+                  <div class="quest-category__checkbox">
+                    <input name="blog" id="blog" type="checkbox" value="blog" />
+                    <label for="blog">Blog</label>
+                  </div>
+                  <div class="quest-category__checkbox">
+                    <input
+                      name="category"
+                      id="fotos"
+                      type="checkbox"
+                      value="fotos"
+                    />
+                    <label for="fotos">Fotos</label>
+                  </div>
+                  <div class="quest-category__checkbox">
+                    <input
+                      name="category"
+                      type="checkbox"
+                      value="redesSociales"
+                      id="redesSociales"
+                    />
+                    <label for="redesSociales">Redes Sociales</label>
+                  </div>
+                  <div class="quest-category__checkbox">
+                    <input
+                      name="category"
+                      id="musica"
+                      type="checkbox"
+                      value="musica"
+                    />
+                    <label for="musica">Música</label>
+                  </div>
+                  <div class="quest-category__checkbox">
+                    <input
+                      name="category"
+                      id="noticias"
+                      type="checkbox"
+                      value="noticias"
+                    />
+                    <label for="noticias">Noticias</label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <!--BUTTON SEND-->
+          <div class="personal-data-buttons">
+            <input
+              class="personal-data-buttons__send"
+              type="submit"
+              value="Enviar"
+              target="__blank"
+            />
+            <!--BUTTON RESET-->
+            <input
+              class="personal-data-buttons__reset"
+              type="reset"
+              value="Limpiar"
+            />
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
